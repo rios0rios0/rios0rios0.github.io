@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "archives.css",
+	"file": "timeline.css",
 	"sources": [
-		"archives.scss",
+		"timeline.scss",
 		"assets/css/_addon/fonts.scss",
 		"assets/css/_addon/module.scss",
 		"assets/css/_addon/variables.scss",
