@@ -1,7 +1,7 @@
                         importScripts("/assets/js/workbox-v3.6.3/workbox-sw.js");
             workbox.setConfig({modulePathPrefix: "/assets/js/workbox-v3.6.3"});
 
-            self.__precacheManifest = [{"url":"/index.html","revision":"31d2a42e0279572f11e74dc95c383621"},{"url":"/posts/sec-ctf-htb-m-blunder/","revision":"4666b05a89b9f5ff25095b7eb879ff3f"},{"url":"/posts/sec-ctf-htb-m-cache/","revision":"8b98baaf7dd4ad46cfd7e1409f39b5cf"},{"url":"/posts/sec-ctf-htb-m-admirer/","revision":"6d29eaab0c9bbed36efc4bb9050046aa"},{"url":"/posts/sec-ctf-htb-m-traceback/","revision":"1e731755e47dc72ecb03a6a46304802f"},{"url":"/posts/customize-the-favicon/","revision":"508bc6e4c2c6d41e12335139123763af"}];
+            self.__precacheManifest = [{"url":"/index.html","revision":"7769cf9654502d95cde184073381f4b9"},{"url":"/posts/sec-ctf-htb-m-blunder/","revision":"4666b05a89b9f5ff25095b7eb879ff3f"},{"url":"/posts/sec-ctf-htb-m-cache/","revision":"8b98baaf7dd4ad46cfd7e1409f39b5cf"},{"url":"/posts/sec-ctf-htb-m-admirer/","revision":"6d29eaab0c9bbed36efc4bb9050046aa"},{"url":"/posts/sec-ctf-htb-m-traceback/","revision":"403881323bc8db264b5563472fa1fd54"},{"url":"/posts/customize-the-favicon/","revision":"508bc6e4c2c6d41e12335139123763af"}];
             // service-worker.js
 
 // set names for both precache & runtime cache
