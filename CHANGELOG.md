@@ -20,6 +20,8 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ### Changed
 
+- refreshed `.github/copilot-instructions.md` to remove incorrect Jekyll build commands and prerequisites that do not apply to this pre-built static output repository
+
 ### Removed
 
 

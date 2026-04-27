@@ -53,51 +53,19 @@ rios0rios0.github.io/
 | Search | [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search) v1.7.3 |
 | Push notifications | [OneSignal](https://onesignal.com/) |
 | Analytics | Google Analytics (UA-134533084-2) |
-| Hosting | [GitHub Pages](https://pages.github.com/) |
-| Runtime | Ruby v2.5+, Bundler v2.0+ |
+| Hosting | [GitHub Pages](https://pages.github.com/) — serves the static files directly |
 
-## Development Workflow
+## Working With This Repository
 
-### Prerequisites
+This repository contains **pre-built static output only**. There is no `Gemfile`, no `_config.yml`, and no `_posts/` directory. Ruby, Bundler, and Jekyll are not needed to work here. Edits are made directly to the compiled HTML files.
 
-- Ruby v2.5+
-- RubyGems
-- Bundler v2.0+
-- Jekyll v4.x (installed via Bundler)
-
-### Common Commands
-
-```bash
-# Install Ruby dependencies
-bundle install
-
-# Serve the site locally with live reload (available at http://localhost:4000)
-bundle exec jekyll serve
-
-# Build the site (output goes to _site/ by default)
-bundle exec jekyll build
-
-# Build with production environment settings
-JEKYLL_ENV=production bundle exec jekyll build
-```
-
-> **Note:** `bundle exec jekyll serve` may take 10–30 seconds to start. Changes to HTML files in the compiled output are reflected immediately on rebuild, but source Markdown posts require a full rebuild cycle.
+To preview locally, open `index.html` in a browser or use any static file server (e.g., `python3 -m http.server 4000`).
 
 ### Adding New Content
 
-New posts follow the Jekyll naming convention. Add Markdown source files to `_posts/` using the format `YYYY-MM-DD-title.md`, then rebuild the site. Post slugs in the compiled output under `posts/` use hyphen-separated lowercase names (e.g., `sec-ctf-htb-m-admirer`).
+Post pages live under `posts/` as compiled HTML directories (e.g., `posts/sec-ctf-htb-m-admirer/`). Post slugs use hyphen-separated lowercase names.
 
-Post front matter example:
-
-```yaml
----
-title: "[SEC-CTF] Hack The Box [M] Machine Name (active)"
-date: YYYY-MM-DD HH:MM:SS -0300
-categories: [Security, CTF, Hack The Box]
-tags: [sec, ctf, htb, machine, active]
-image: /files/security/ctf/htb/m.machine-name/info.png
----
-```
+Post images and assets go under `files/security/ctf/htb/m.<machine-name>/`.
 
 ## Architecture and Design Patterns
 
@@ -129,25 +97,7 @@ The site is deployed automatically to GitHub Pages from the `main` branch. No se
 - Branch names follow the pattern `feat/description`, `fix/description`, `chore/description`.
 - All pull requests should target the `main` branch.
 
-## Common Tasks
+## Troubleshooting
 
-### Previewing the site locally
-
-```bash
-bundle install
-bundle exec jekyll serve
-# Open http://localhost:4000
-```
-
-### Adding a Hack The Box write-up
-
-1. Create a Markdown file in `_posts/` following the naming convention.
-2. Add screenshots and images under `files/security/ctf/htb/m.<machine-name>/`.
-3. Build the site: `bundle exec jekyll build`.
-4. Commit the compiled output from `_site/` (or the updated files directly if editing HTML).
-
-### Troubleshooting
-
-- **Build errors**: Ensure Ruby and Bundler versions meet the prerequisites. Run `bundle install` to resolve gem dependency issues.
 - **Missing styles or scripts**: The site relies on CDN-hosted assets (Bootstrap, FontAwesome, jQuery). Ensure network access is available when testing locally.
 - **Service worker caching**: Hard-reload (`Ctrl+Shift+R`) the browser to bypass the service worker cache during development.
