@@ -16,14 +16,11 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
-### Added
+## [1.1.1] - 2026-04-28
 
 ### Changed
 
 - refreshed `.github/copilot-instructions.md` to remove incorrect Jekyll build commands and prerequisites that do not apply to this pre-built static output repository
-
-### Removed
-
 
 ## [1.1.0] - 2020-09-07
 
