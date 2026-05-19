@@ -29,6 +29,7 @@ rios0rios0.github.io/
 ├── tags/                     # Tag index pages (active, ctf, htb, machine, retired, sec)
 ├── timeline/                 # Timeline archive page
 ├── 404.html                  # Custom 404 error page
+├── CHANGELOG.md              # Release history and release process
 ├── CONTRIBUTING.md           # Contribution guidelines
 ├── LICENSE                   # License file
 ├── README.md                 # Project overview
@@ -88,6 +89,8 @@ Post images and assets go under `files/security/ctf/htb/m.<machine-name>/`.
 ## CI/CD Pipeline
 
 The site is deployed automatically to GitHub Pages from the `main` branch. No separate build workflow is required — GitHub Pages natively serves the static HTML files committed to the repository.
+
+A `release.yaml` workflow runs on pushes to `main` and delegates to the reusable `rios0rios0/pipelines` release workflow to create Git tags. See `CHANGELOG.md` for the release process: create a `bump/x.x.x` branch, move `[Unreleased]` entries under a versioned heading, merge to `main`, and a tag is created automatically.
 
 ## Coding Conventions
 
