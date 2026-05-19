@@ -16,6 +16,8 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-05-19
+
 ### Changed
 
 - refreshed `.github/copilot-instructions.md` to add missing `CHANGELOG.md` to the repo structure tree and document the new `release.yaml` workflow in the CI/CD section
