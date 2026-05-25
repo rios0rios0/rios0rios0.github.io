@@ -16,6 +16,10 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+### Added
+
+- created `CLAUDE.md` to provide Claude Code with repo-specific guidance (pre-built static output, no Jekyll tooling, key conventions)
+
 ## [1.1.2] - 2026-05-19
 
 ### Changed
