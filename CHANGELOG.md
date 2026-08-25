@@ -15,7 +15,7 @@ When a new release is proposed:
 1. Create a new branch `bump/x.x.x` (this isn't a long-lived branch!!!);
 2. The fragments pending under `.changes/unreleased/` are compiled into a version section by `chlog batch auto && chlog merge` (AutoBump does this for you — it reads the fragments directly);
 3. Open a Pull Request with the bump version changes targeting the `main` branch;
-4. When the Pull Request is merged, a new Git tag must be created using <LINK TO THE PLATFORM TO OPEN THE PULL REQUEST>.
+4. When the Pull Request is merged, the [`release.yaml`](.github/workflows/release.yaml) workflow creates the Git tag and the GitHub release automatically from the version in the bump commit.
 
 Releases to productive environments should run from a tagged version.
 Exceptions are acceptable depending on the circumstances (critical bug fixes that can be cherry-picked, etc.).
