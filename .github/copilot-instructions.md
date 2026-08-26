@@ -90,7 +90,7 @@ Post images and assets go under `files/security/ctf/htb/m.<machine-name>/`.
 
 The site is deployed automatically to GitHub Pages from the `main` branch. No separate build workflow is required — GitHub Pages natively serves the static HTML files committed to the repository.
 
-A `release.yaml` workflow runs on pushes to `main` and delegates to the reusable `rios0rios0/pipelines` release workflow to create Git tags. See `CHANGELOG.md` for the release process: create a `bump/x.x.x` branch, move `[Unreleased]` entries under a versioned heading, merge to `main`, and a tag is created automatically.
+A `release.yaml` workflow runs on pushes to `main` and delegates to the reusable `rios0rios0/pipelines` release workflow to create Git tags. See `CHANGELOG.md` for the release process: create a `bump/x.x.x` branch, compile the fragments pending under `.changes/unreleased/` into a version section with `chlog batch auto && chlog merge` — `CHANGELOG.md` is generated, never edited by hand — merge to `main`, and a tag is created automatically.
 
 ## Coding Conventions
 
@@ -104,3 +104,28 @@ A `release.yaml` workflow runs on pushes to `main` and delegates to the reusable
 
 - **Missing styles or scripts**: The site relies on CDN-hosted assets (Bootstrap, FontAwesome, jQuery). Ensure network access is available when testing locally.
 - **Service worker caching**: Hard-reload (`Ctrl+Shift+R`) the browser to bypass the service worker cache during development.
+
+<!-- chlog:start -->
+## Changelog (chlog) — MANDATORY
+
+If the repository you are working in uses chlog (a `.chlog.yaml` or `.chlog.yml`
+config file, or a `.changes/` directory, exists at the project root), the
+following is binding and ALWAYS applies: whenever you make ANY change, you MUST
+create a changelog fragment as part of the same change — automatically, without
+being asked, before committing.
+
+- Do NOT edit CHANGELOG.md directly; it is generated from fragments.
+- Create the fragment with:
+  `chlog new --kind <Kind> --body "<imperative description>"`
+- Valid kinds: Added, Changed, Deprecated, Removed, Fixed, Security
+- Choose the kind that best matches the change (e.g., new feature → Added,
+  bug fix → Fixed, behavior change → Changed, removal → Removed, security fix → Security).
+- If the change is backward-INCOMPATIBLE with the public API (a breaking
+  change), you MUST add the `--breaking` flag:
+  `chlog new --kind <Kind> --breaking --body "<description>"`.
+  This is the ONLY thing that triggers a major version bump — the kind alone
+  never does (per SemVer, major = incompatible change). When unsure whether a
+  change breaks compatibility, ask the user instead of guessing.
+- Fragments are YAML files in `.changes/unreleased/`; stage them with your commit.
+- `chlog check` fails the build when a fragment is missing — never skip it.
+<!-- chlog:end -->
