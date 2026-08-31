@@ -1,0 +1,3 @@
+kind: 'Changed'
+body: 'refreshed `.github/copilot-instructions.md` to fix the broken Git Flow guide link, which used a nested `wiki/Life-Cycle/Git-Flow` path although the guide wiki is flat and the page resolves at `wiki/Git-Flow`'
+time: '2026-09-01T16:54:44.237429641Z'
