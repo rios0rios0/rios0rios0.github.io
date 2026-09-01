@@ -22,6 +22,12 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+## [1.4.1] - 2026-09-01
+
+### Changed
+
+- refreshed `.github/copilot-instructions.md` to fix the broken Git Flow guide link, which used a nested `wiki/Life-Cycle/Git-Flow` path although the guide wiki is flat and the page resolves at `wiki/Git-Flow`
+
 ## [1.4.0] - 2026-08-28
 
 ### Added
