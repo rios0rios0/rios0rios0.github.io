@@ -96,7 +96,7 @@ A `release.yaml` workflow runs on pushes to `main` and delegates to the reusable
 
 - HTML files in the compiled output are **minified** (single-line). Do not reformat them.
 - Post images and assets are stored under `files/security/ctf/htb/m.<machine-name>/`.
-- Follow the [commit conventions](https://github.com/rios0rios0/guide/wiki/Life-Cycle/Git-Flow) from the organization guide (Conventional Commits format, e.g., `feat:`, `fix:`, `chore:`).
+- Follow the [commit conventions](https://github.com/rios0rios0/guide/wiki/Git-Flow) from the organization guide (Conventional Commits format, e.g., `feat:`, `fix:`, `chore:`).
 - Branch names follow the pattern `feat/description`, `fix/description`, `chore/description`.
 - All pull requests should target the `main` branch.
 
