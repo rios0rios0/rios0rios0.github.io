@@ -1,0 +1,3 @@
+kind: 'Changed'
+body: 'refreshed `.github/skills/code-review/SKILL.md` to remove the matchable Slack prefix from the secret-hygiene bullet'
+time: '2026-09-07T12:00:00.000000000Z'
