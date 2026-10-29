@@ -1,0 +1,3 @@
+kind: 'Fixed'
+body: 'replaced the `bundle`/`jekyll` setup steps in `README.md` and `CONTRIBUTING.md`, which fail without a `Gemfile`, with the static-server preview, and corrected the Copilot preview advice that opened `index.html` from disk'
+time: '2026-10-29T00:27:15.047790139Z'
