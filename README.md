@@ -29,13 +29,14 @@ The site includes write-ups for various Hack The Box machines:
 ```bash
 git clone https://github.com/rios0rios0/rios0rios0.github.io.git
 cd rios0rios0.github.io
-bundle install
-bundle exec jekyll serve
+python3 -m http.server 4000
 ```
+
+This repository holds the pre-built static output, not the Jekyll source: there is no `Gemfile`, `_config.yml`, or `_posts/` directory, so Ruby and Jekyll are not needed.
 
 ## Usage
 
-Visit `http://localhost:4000` after starting the Jekyll server to browse the site locally. Add new posts as Markdown files in the `_posts/` directory following Jekyll conventions.
+Visit `http://localhost:4000` after starting the server to browse the site locally. Serve the repository root rather than opening `index.html` from disk, because pages load assets by absolute path (`/assets/...`). Compiled post pages live under `posts/<slug>/`, and their images under `files/security/ctf/htb/m.<machine>/`.
 
 ## Contributing
 

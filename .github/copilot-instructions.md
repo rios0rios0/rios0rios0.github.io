@@ -60,7 +60,7 @@ rios0rios0.github.io/
 
 This repository contains **pre-built static output only**. There is no `Gemfile`, no `_config.yml`, and no `_posts/` directory. Ruby, Bundler, and Jekyll are not needed to work here. Edits are made directly to the compiled HTML files.
 
-To preview locally, open `index.html` in a browser or use any static file server (e.g., `python3 -m http.server 4000`).
+To preview locally, serve the repository root with a static file server (e.g., `python3 -m http.server 4000`). Pages load assets by absolute path (`/assets/...`), so opening `index.html` directly from disk does not render them.
 
 ### Adding New Content
 

@@ -1,10 +1,10 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI coding agents (Claude Code, Codex, Cursor, GitHub Copilot) when working with code in this repository.
 
 ## What this repo is
 
-Pre-built static output for a Jekyll/Chirpy blog deployed to GitHub Pages. There is no Gemfile, no `_config.yml`, no `_posts/` directory. Ruby and Jekyll are **not** needed. The README and CONTRIBUTING docs reference Jekyll build commands that do not apply here -- ignore them.
+Pre-built static output for a Jekyll/Chirpy blog deployed to GitHub Pages. There is no Gemfile, no `_config.yml`, no `_posts/` directory. Ruby and Jekyll are **not** needed; ignore any `bundle` or `jekyll` command you find for this site.
 
 ## Working with the site
 

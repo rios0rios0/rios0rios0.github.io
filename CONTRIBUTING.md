@@ -7,28 +7,24 @@ development practices, refer to the **[Development Guide](https://github.com/rio
 
 ## Prerequisites
 
-- [Ruby](https://www.ruby-lang.org/) v2.5+
-- [RubyGems](https://rubygems.org/)
-- [Bundler](https://bundler.io/) v2.0+
-- [Jekyll](https://jekyllrb.com/) v4.x (installed via Bundler)
+- [Python 3](https://www.python.org/) or any other static file server, to preview the site
+- [chlog](https://github.com/luizjhonata/chlog), to record changelog fragments
+
+This repository holds the pre-built static output of a Jekyll site, not its source: there is no `Gemfile`, `_config.yml`, or `_posts/` directory, so Ruby, Bundler, and Jekyll are not needed.
 
 ## Development Workflow
 
 1. Fork and clone the repository
 2. Create a branch: `git checkout -b feat/my-change`
-3. Install Ruby dependencies:
+3. Serve the repository root locally:
    ```bash
-   bundle install
+   python3 -m http.server 4000
    ```
-4. Serve the site locally with live reload:
+4. Open [http://localhost:4000](http://localhost:4000) to preview the site (opening `index.html` from disk does not load the assets, which use absolute paths)
+5. Compiled post pages live under `posts/<slug>/` and their images under `files/security/ctf/htb/m.<machine>/`; the HTML is minified, so do not reformat it
+6. Record the change with a changelog fragment (`CHANGELOG.md` is generated, never edited by hand):
    ```bash
-   bundle exec jekyll serve
+   chlog new --kind Changed --body '<past-tense description>'
    ```
-5. Open [http://localhost:4000](http://localhost:4000) to preview the site
-6. Add or edit posts as Markdown files in the `_posts/` directory following the Jekyll naming convention (`YYYY-MM-DD-title.md`)
-7. Verify that the site builds without errors:
-   ```bash
-   bundle exec jekyll build
-   ```
-8. Commit following the [commit conventions](https://github.com/rios0rios0/guide/wiki/Life-Cycle/Git-Flow)
-9. Open a pull request against `main`
+7. Commit following the [commit conventions](https://github.com/rios0rios0/guide/wiki/Git-Flow)
+8. Open a pull request against `main`
