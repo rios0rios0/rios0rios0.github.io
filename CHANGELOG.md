@@ -22,6 +22,16 @@ Exceptions are acceptable depending on the circumstances (critical bug fixes tha
 
 ## [Unreleased]
 
+## [1.5.2] - 2026-11-04
+
+### Changed
+
+- moved the agent instructions from `CLAUDE.md` to `AGENTS.md`, keeping a `CLAUDE.md` that imports it, and pointed the `code-review` skill at `AGENTS.md`
+
+### Fixed
+
+- replaced the `bundle`/`jekyll` setup steps in `README.md` and `CONTRIBUTING.md`, which fail without a `Gemfile`, with the static-server preview, and corrected the Copilot preview advice that opened `index.html` from disk
+
 ## [1.5.1] - 2026-09-08
 
 ### Changed
